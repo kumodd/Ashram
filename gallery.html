@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gallery | Ashram Restro — Near IIT Patna, Bihta</title>
+  <meta name="description"
+    content="Photo gallery of Ashram Restro — food, interiors, ambience, and seating zones. Near IIT Patna, Bihta, Bihar." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .gallery-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, .92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s;
+    }
+
+    .gallery-lightbox.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .gallery-lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: var(--radius-md);
+      object-fit: contain;
+    }
+
+    .gallery-lightbox-close {
+      position: absolute;
+      top: max(1rem, env(safe-area-inset-top, 16px));
+      right: max(1.25rem, env(safe-area-inset-right, 16px));
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, .6);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .3);
+      color: #fff;
+      font-size: 1.75rem;
+      cursor: pointer;
+      line-height: 1;
+      z-index: 10001;
+    }
+
+    .gal-placeholder {
+      background: var(--cream-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      color: var(--text-muted);
+      font-size: .78rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .gal-placeholder .icon {
+      font-size: 2.5rem;
+    }
+
+    .gal-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: .4rem .6rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, .7), transparent);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 600;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="lang-en">Ashram Restro</span><span class="lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां</span><span class="sub lang-en">Near IIT
+          Patna</span><span class="sub lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आईआईटी पटना के
+          पास</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="facilities.html">Facilities</a>
+        <a href="about.html">About</a><a href="gallery.html" class="active">Gallery</a><a
+          href="booking.html">Booking</a><a href="visit.html">Visit</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-toggle"><button data-lang="en" class="active">EN</button><button data-lang="hi">हि</button>
+        </div>
+        <button class="cart-btn" id="cart-btn" aria-label="View cart">🛒 <span class="lang-en">Cart</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कार्ट</span><span class="cart-badge"
+            style="display:none">0</span></button>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="nav-mobile">
+    <a href="index.html">🏠 Home</a><a href="menu.html">🍽️ Menu</a><a href="facilities.html">✳ Facilities</a>
+    <a href="about.html">◒ About</a><a href="gallery.html">🖼 Gallery</a><a href="booking.html">📅 Booking</a><a
+      href="visit.html">📍 Visit</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">होम</span></a>
+        <span>›</span><span><span class="lang-en">Gallery</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">गैलरी</span></span>
+      </nav>
+      <h1><span class="lang-en">Gallery</span><span class="lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">गैलरी</span></h1>
+      <p><span class="lang-en">A glimpse into our food, interiors, and ambience.</span><span class="lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">हमारे खाने, इंटीरियर और माहौल की एक झलक।</span></p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container">
+
+      <!-- Filter -->
+      <div class="gallery-filter" role="group" aria-label="Gallery filter">
+        <button class="cat-btn active" data-filter="all" id="gf-all">
+          <span class="lang-en">All</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">सभी</span>
+        </button>
+        <button class="cat-btn" data-filter="food">🍛 <span class="lang-en">Food</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">खाना</span></button>
+        <button class="cat-btn" data-filter="interior">✨ <span class="lang-en">Interior</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">इंटीरियर</span></button>
+        <button class="cat-btn" data-filter="zones">🪑 <span class="lang-en">Zones</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">ज़ोन</span></button>
+      </div>
+
+      <!-- Gallery grid -->
+      <div class="gallery-grid" id="gallery-grid">
+
+        <!-- Real photos -->
+        <div class="gallery-item wide fade-in" data-cat="food" onclick="openLightbox(this)">
+          <img src="assets/images/gallery-paneer-tikka.jpg"
+            alt="Paneer Tikka — chargrilled cottage cheese on a slate board with green chutney" />
+          <div class="gal-label">Paneer Tikka</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="food" onclick="openLightbox(this)">
+          <img src="assets/images/gallery-biryani.jpg"
+            alt="Chicken Hyderabadi Biryani in a traditional handi pot with steam rising" />
+          <div class="gal-label">Chicken Hyderabadi Biryani</div>
+        </div>
+
+        <div class="gallery-item tall fade-in" data-cat="interior" onclick="openLightbox(this)">
+          <img src="assets/images/about-interior.png"
+            alt="Warm restaurant interior at Ashram Restro — wooden tables, Edison bulbs, green plants" />
+          <div class="gal-label">Dining Interior</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="food" onclick="openLightbox(this)">
+          <img src="assets/images/gallery-paneer-butter-masala.jpg"
+            alt="Paneer Butter Masala in a copper bowl served with naan bread" />
+          <div class="gal-label">Paneer Butter Masala</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="zones" onclick="openLightbox(this)">
+          <img src="assets/images/facility-couple-zone.png"
+            alt="Couple zone — intimate candlelit booth seating at Ashram Restro" />
+          <div class="gal-label">Couple Zone</div>
+        </div>
+
+        <!-- Placeholder tiles — replace with real photos -->
+        <div class="gallery-item fade-in" data-cat="food">
+          <div class="gal-placeholder" style="width:100%;height:100%;">
+            <span class="icon">🍗</span>
+            <span class="lang-en">Chicken 65<br /><span style="font-size:.72rem;color:var(--text-mid);">Chef's
+                Special</span></span>
+            <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif;">चिकन 65<br /><span
+                style="font-size:.72rem;color:var(--text-mid);">शेफ़ स्पेशल</span></span>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="food">
+          <div class="gal-placeholder" style="width:100%;height:100%;">
+            <span class="icon">🫕</span>
+            <span class="lang-en">Dal Tadka<br /><span style="font-size:.72rem;color:var(--text-mid);">Desi
+                Tadka</span></span>
+            <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif;">दाल तड़का<br /><span
+                style="font-size:.72rem;color:var(--text-mid);">देसी तड़का</span></span>
+          </div>
+        </div>
+
+        <!-- Zone Photos -->
+        <div class="gallery-item fade-in" data-cat="zones" onclick="openLightbox(this)">
+          <img src="assets/images/facility-private-zone.png" alt="Private Dining Zone at Ashram Restro" />
+          <div class="gal-label">Private Zone</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="zones" onclick="openLightbox(this)">
+          <img src="assets/images/facility-silent-zone.png" alt="Silent Zone reading & peaceful dining at Ashram Restro" />
+          <div class="gal-label">Silent Zone</div>
+        </div>
+
+        <div class="gallery-item wide fade-in" data-cat="zones" onclick="openLightbox(this)">
+          <img src="assets/images/facility-meeting-zone.jpg"
+            alt="Meeting and conference dining setup in Silent Zone at Ashram Restro" />
+          <div class="gal-label">Quiet Meeting Setup (Silent Zone)</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="zones" onclick="openLightbox(this)">
+          <img src="assets/images/facility-working-zone.jpg"
+            alt="Work and study desks with power outlets in Silent Zone at Ashram Restro" />
+          <div class="gal-label">Work &amp; Study Desks (Silent Zone)</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="interior" onclick="openLightbox(this)">
+          <img src="assets/images/about-interior.png" alt="Spacious main dining hall at Ashram Restro" />
+          <div class="gal-label">Main Dining Area</div>
+        </div>
+
+        <div class="gallery-item fade-in" data-cat="zones" onclick="openLightbox(this)">
+          <img src="assets/images/facility-parking.jpg" alt="Dedicated parking area at Ashram Restro" />
+          <div class="gal-label">Dedicated Parking</div>
+        </div>
+
+      </div><!-- /gallery-grid -->
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-label="Image viewer" aria-modal="true">
+    <button class="gallery-lightbox-close" onclick="closeLightbox()" aria-label="Close image viewer">✕</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Ashram Restro</div>
+          <div class="footer-brand-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां</div>
+          <p class="footer-tagline"><span class="lang-en">Near IIT Patna, Bihta, Bihar.</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a
+            href="facilities.html">Facilities</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a
+            href="booking.html">Booking</a><a href="visit.html">Visit</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><a href="tel:+918002193829">+91 80021 93829</a></p>
+          <p><a href="tel:+919113723907">+91 91137 23907</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="footer-year"></span> Ashram Restro</span><span
+          style="font-size:.74rem;color:rgba(255,255,255,.3);">Gallery images are placeholders pending owner-approved
+          photographs.</span></div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your Order</h2><button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="order-type-select">
+        <button class="order-type-btn active" data-type="dine-in">🍽️<span
+            style="font-size:.68rem;">Dine-in</span></button>
+        <button class="order-type-btn" data-type="takeaway">🥡<span style="font-size:.68rem;">Takeaway</span></button>
+        <button class="order-type-btn" data-type="delivery">🏠<span style="font-size:.68rem;">Delivery</span></button>
+      </div>
+      <div class="checkout-fields">
+        <div class="form-group"><input type="text" id="cust-name" placeholder="Your name *" required /><span
+            class="error-msg">Required</span></div>
+        <div class="form-group"><input type="tel" id="cust-phone" placeholder="Phone number *" required /><span
+            class="error-msg">Required</span></div>
+        <div class="form-group" id="delivery-addr-wrap" style="display:none"><textarea id="cust-addr"
+            placeholder="Delivery address *" rows="2"></textarea><span class="error-msg">Required</span></div>
+        <textarea id="cust-notes" placeholder="Notes (optional)" rows="2"
+          style="width:100%;padding:.55rem .75rem;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:.85rem;resize:vertical;font-family:inherit;"></textarea>
+      </div>
+      <div class="cart-total-row"><span class="cart-total-label">Est. Total</span><span class="cart-total-val"
+          id="cart-total-val">₹0</span></div>
+      <button class="btn btn-whatsapp btn-block" id="cart-checkout-btn" disabled>💬 Send Order via WhatsApp</button>
+      <p class="cart-note">Staff will confirm your order.</p>
+    </div>
+  </aside>
+
+  <script src="site-config.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    /* Gallery filter */
+    document.querySelectorAll('.gallery-filter .cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-filter .cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('#gallery-grid .gallery-item, #gallery-grid [data-cat]').forEach(el => {
+          el.style.display = (f === 'all' || el.dataset.cat === f) ? '' : 'none';
+        });
+      });
+    });
+
+    /* Lightbox */
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      if (!img) return;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('gallery-lightbox').classList.add('open');
+    }
+    function closeLightbox() { document.getElementById('gallery-lightbox').classList.remove('open'); }
+    document.getElementById('gallery-lightbox').addEventListener('click', e => { if (e.target === e.currentTarget) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    /* Hover zoom */
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.closest('.gallery-item')?.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; });
+      img.closest('.gallery-item')?.addEventListener('mouseleave', () => { img.style.transform = ''; });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Menu &amp; Order | Ashram Restro — Near IIT Patna, Bihta</title>
+  <meta name="description" content="Browse the full Ashram Restro menu. Order veg or non-veg starters, main course, biryani, bread, chowmein, and drinks. Place your order via WhatsApp."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="lang-en">Ashram Restro</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां</span>
+      <span class="sub lang-en">Near IIT Patna</span><span class="sub lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आईआईटी पटना के पास</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="menu.html" class="active">Menu</a>
+      <a href="facilities.html">Facilities</a><a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a><a href="booking.html">Booking</a><a href="visit.html">Visit</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle"><button data-lang="en" class="active">EN</button><button data-lang="hi">हि</button></div>
+      <button class="cart-btn" id="cart-btn" aria-label="View cart">
+        🛒 <span class="lang-en">Cart</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कार्ट</span>
+        <span class="cart-badge" style="display:none">0</span>
+      </button>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="nav-mobile">
+  <a href="index.html">🏠 Home</a><a href="menu.html">🍽️ Menu &amp; Order</a>
+  <a href="facilities.html">✳ Facilities</a><a href="about.html">◒ About</a>
+  <a href="gallery.html">🖼 Gallery</a><a href="booking.html">📅 Booking</a><a href="visit.html">📍 Visit</a>
+</nav>
+
+<!-- MENU CONTROLS -->
+<div class="menu-controls" role="search" aria-label="Menu filters">
+  <div class="container menu-controls-inner">
+    <div class="menu-search">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="search" id="menu-search" placeholder="Search dishes… / खाना खोजें…" aria-label="Search menu items"/>
+    </div>
+    <div class="veg-filter-wrap">
+      <label class="toggle-switch" for="veg-toggle" aria-label="Vegetarian only">
+        <input type="checkbox" id="veg-toggle" role="switch"/>
+        <span class="toggle-track"></span>
+      </label>
+      <span class="veg-label">🌿 <span class="lang-en">Veg Only</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">सिर्फ़ वेज</span></span>
+    </div>
+  </div>
+  <div class="container" style="padding-top:.5rem;padding-bottom:.5rem;overflow-x:auto;">
+    <div class="cat-filters" id="cat-filters" role="group" aria-label="Category filter"></div>
+  </div>
+</div>
+
+<!-- MENU CONTENT -->
+<main style="padding-top:calc(var(--nav-h) + 120px);padding-bottom:4rem;" id="menu-main">
+  <div class="container">
+    <div class="section-header fade-in" style="margin-bottom:1.5rem;">
+      <span class="section-label">🍽️ <span class="lang-en">Full Menu</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">पूरा मेनू</span></span>
+      <h1>
+        <span class="lang-en">Ashram Restro Menu</span>
+        <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां मेनू</span>
+      </h1>
+      <div class="divider"></div>
+      <p>
+        <span class="lang-en">Browse all categories, filter by preference, and add items to your cart. Send your order via WhatsApp — our team will confirm.</span>
+        <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">सभी कैटेगरी ब्राउज़ करें, कार्ट में जोड़ें, और WhatsApp पर ऑर्डर भेजें।</span>
+      </p>
+      <div style="display:flex;align-items:center;gap:.5rem;margin-top:.75rem;font-size:.82rem;color:var(--text-muted);">
+        <span class="veg-dot veg"></span><span class="lang-en">Vegetarian</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">शाकाहारी</span>
+        &nbsp;&nbsp;<span class="veg-dot nonveg"></span><span class="lang-en">Non-Vegetarian</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">मांसाहारी</span>
+        &nbsp;&nbsp;<span style="background:var(--orange-50);color:var(--orange);font-weight:600;padding:.15rem .5rem;border-radius:4px;font-size:.73rem;">H/F = Half / Full portion</span>
+      </div>
+    </div>
+
+    <!-- Menu rendered by JS -->
+    <div id="menu-categories"></div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Ashram Restro</div>
+        <div class="footer-brand-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां</div>
+        <p class="footer-tagline"><span class="lang-en">Open 12 PM–12 AM · Free delivery within 6 km · Near IIT Patna, Bihta.</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">दोपहर 12 – रात 12 · 6 किमी में मुफ़्त डिलीवरी।</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="facilities.html">Facilities</a>
+        <a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="booking.html">Booking</a><a href="visit.html">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><a href="tel:+918002193829">+91 80021 93829</a></p>
+        <p><a href="tel:+919113723907">+91 91137 23907</a></p>
+        <p><a href="tel:+918210395688">+91 82103 95688</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> Ashram Restro</span>
+      <span style="font-size:.74rem;color:rgba(255,255,255,.3);">Prices as listed on the official menu. Final charges confirmed by staff.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+<aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h2><span class="lang-en">Your Order</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आपका ऑर्डर</span></h2>
+    <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="order-type-select">
+      <button class="order-type-btn active" data-type="dine-in">🍽️<span style="font-size:.68rem;">Dine-in</span></button>
+      <button class="order-type-btn" data-type="takeaway">🥡<span style="font-size:.68rem;">Takeaway</span></button>
+      <button class="order-type-btn" data-type="delivery">🏠<span style="font-size:.68rem;">Delivery</span></button>
+    </div>
+    <div class="checkout-fields">
+      <div class="form-group"><input type="text" id="cust-name" placeholder="Your name *" required/><span class="error-msg">Required</span></div>
+      <div class="form-group"><input type="tel" id="cust-phone" placeholder="Phone number *" required/><span class="error-msg">Valid phone required</span></div>
+      <div class="form-group" id="delivery-addr-wrap" style="display:none">
+        <textarea id="cust-addr" placeholder="Delivery address *" rows="2"></textarea>
+        <span class="error-msg">Address required for delivery</span>
+      </div>
+      <textarea id="cust-notes" placeholder="Special instructions (optional)" rows="2" style="width:100%;padding:.55rem .75rem;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:.85rem;resize:vertical;font-family:inherit;"></textarea>
+    </div>
+    <div class="cart-total-row">
+      <span class="cart-total-label"><span class="lang-en">Est. Total</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">अनुमानित कुल</span></span>
+      <span class="cart-total-val" id="cart-total-val">₹0</span>
+    </div>
+    <button class="btn btn-whatsapp btn-block" id="cart-checkout-btn" disabled>
+      💬 <span class="lang-en">Send Order via WhatsApp</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">WhatsApp पर ऑर्डर भेजें</span>
+    </button>
+    <p class="cart-note"><span class="lang-en">Sending opens WhatsApp. Staff will confirm your order — this is an estimate, not a final invoice.</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">WhatsApp खुलेगा। स्टाफ कन्फर्म करेगा।</span></p>
+  </div>
+</aside>
+
+<script src="site-config.js"></script>
+<script src="menu-data.js"></script>
+<script src="assets/site.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

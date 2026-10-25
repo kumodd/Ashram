@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Facilities &amp; Seating Zones | Ashram Restro — Near IIT Patna, Bihta</title>
+  <meta name="description"
+    content="Explore 5 dedicated seating spaces at Ashram Restro near IIT Patna: Couple Zone, Private Zone, Silent Zone (Work, Study &amp; Meetings), Family Dining, and Dedicated Parking." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="lang-en">Ashram Restro</span><span class="lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां</span>
+        <span class="sub lang-en">Near IIT Patna</span><span class="sub lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">आईआईटी पटना के पास</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="menu.html">Menu</a>
+        <a href="facilities.html" class="active">Facilities</a><a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a><a href="booking.html">Booking</a><a href="visit.html">Visit</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-toggle"><button data-lang="en" class="active">EN</button><button data-lang="hi">हि</button>
+        </div>
+        <button class="cart-btn" id="cart-btn" aria-label="View cart">🛒 <span class="lang-en">Cart</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कार्ट</span><span class="cart-badge"
+            style="display:none">0</span></button>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="nav-mobile">
+    <a href="index.html">🏠 Home</a><a href="menu.html">🍽️ Menu</a><a href="facilities.html">✳ Facilities</a>
+    <a href="about.html">◒ About</a><a href="gallery.html">🖼 Gallery</a><a href="booking.html">📅 Booking</a><a
+      href="visit.html">📍 Visit</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">होम</span></a>
+        <span>›</span><span><span class="lang-en">Facilities</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">सुविधाएं</span></span>
+      </nav>
+      <h1><span class="lang-en">Facilities &amp; Seating Zones</span><span class="lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">सुविधाएं और बैठने के ज़ोन</span></h1>
+      <p><span class="lang-en">Five thoughtfully designed spaces for romantic dinners, productive work, quiet meetings,
+          family dining, and secure parking.</span><span class="lang-hi"
+          style="font-family:'Noto Sans Devanagari',sans-serif">रोमांटिक डिनर, पढ़ाई/काम, शांत मीटिंग्स, पारिवारिक भोजन
+          और पार्किंग के लिए पाँच समर्पित ज़ोन।</span></p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header text-center fade-in" style="margin-bottom:1.75rem;">
+        <span class="section-label">✳ <span class="lang-en">Tailored Atmospheres</span><span class="lang-hi"
+            style="font-family:'Noto Sans Devanagari',sans-serif">अनुकूल वातावरण</span></span>
+        <h2 style="margin-top:.35rem;">
+          <span class="lang-en">Find Your Ideal Corner</span>
+          <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">अपना मनपसंद कोना चुनें</span>
+        </h2>
+        <div class="divider center"></div>
+        <p style="max-width:680px;margin:0 auto;color:var(--text-mid);">
+          <span class="lang-en">Whether you're stepping in for an intimate couple dinner, a focused study session near
+            IIT Patna, a quiet team discussion, or a family feast, each zone at Ashram Restro offers a distinct
+            ambience.</span>
+          <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">चाहे आप कपल डिनर के लिए आएं,
+            एकाग्र अध्ययन के लिए, शांत टीम चर्चा के लिए या पारिवारिक दावत के लिए, आश्रम रेस्तरां का हर कोना एक अलग अनुभव
+            देता है।</span>
+        </p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="facility-filter-bar fade-in" role="tablist" aria-label="Filter seating zones">
+        <button class="cat-btn active" data-zone-filter="all">✳ <span class="lang-en">All Spaces (5)</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">सभी स्थान (5)</span></button>
+        <button class="cat-btn" data-zone-filter="couples">♡ <span class="lang-en">Couple Zone</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कपल ज़ोन</span></button>
+        <button class="cat-btn" data-zone-filter="private">🔒 <span class="lang-en">Private Zone</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">प्राइवेट ज़ोन</span></button>
+        <button class="cat-btn" data-zone-filter="work">💻 <span class="lang-en">Silent, Work &amp; Meetings</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">साइलेंट, काम और
+            मीटिंग्स</span></button>
+        <button class="cat-btn" data-zone-filter="dining">🍽️ <span class="lang-en">Dining &amp; Parking</span><span
+            class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">डाइनिंग और पार्किंग</span></button>
+      </div>
+
+      <div class="facilities-grid" id="facilities-grid">
+
+        <!-- 1. Couple Zone -->
+        <article class="facility-card fade-in" data-group="couples" aria-labelledby="fac-couple">
+          <div class="facility-media">
+            <img src="assets/images/facility-couple-zone.png"
+              onerror="this.onerror=null;this.src='assets/images/facility-couple-zone.jpg';"
+              alt="Couple zone — intimate candlelit booth seating at Ashram Restro" class="facility-img"
+              loading="lazy" />
+            <span class="facility-overlay-badge">♡ Zone 01</span>
+            <span class="facility-vibe-tag">Candlelit &amp; Curtained</span>
+          </div>
+          <div class="facility-body">
+            <div class="facility-marker">♡ Romantic &amp; Intimate</div>
+            <h3 id="fac-couple"><span class="lang-en">Couple Zone</span><span class="lang-hi"
+                style="font-family:'Noto Sans Devanagari',sans-serif">कपल ज़ोन</span></h3>
+            <p>
+              <span class="lang-en">A private, warmly lit corner curated specially for couples and two-guest
+                celebrations. Sheer curtains and cozy booth seating ensure personal privacy away from the buzz of the
+                main dining room.</span>
+              <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कपल और दो लोगों के खास जश्न के
+                लिए डिज़ाइन किया गया एक निजी, गर्म रोशनी वाला कोना। पर्दे और आरामदायक सोफे आपको मुख्य डाइनिंग से अलग
+                सुकून देते हैं।</span>
+            </p>
+            <div class="facility-features">
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Atmosphere:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">माहौल:</strong> <span class="lang-en">Soft
+                    ambient lighting &amp; romantic music</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">हल्की रोशनी और मधुर संगीत</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Privacy:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">प्राइवेसी:</strong> <span
+                    class="lang-en">Curtained partition &amp; dedicated discreet service</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">पर्दे का पार्टीशन और विशेष
+                    सर्विस</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Best For:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">उपयुक्त:</strong> <span class="lang-en">Dates,
+                    anniversaries, birthdays &amp; intimate dinners</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">डेट, सालगिरह और व्यक्तिगत
+                    सेलिब्रेशन</span></span></div>
+            </div>
+            <div class="facility-footer-action">
+              <a href="booking.html?seating=Couple+Zone" class="facility-btn-reserve">
+                <span class="lang-en">Reserve Couple Table →</span>
+                <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कपल टेबल बुक करें →</span>
+              </a>
+              <a href="https://wa.me/918002193829?text=Hi%20Ashram%20Restro%2C%20I%20would%20like%20to%20enquire%20about%20booking%20the%20Couple%20Zone."
+                target="_blank" rel="noopener" class="facility-btn-whatsapp" aria-label="Enquire on WhatsApp">💬</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Private Zone -->
+        <article class="facility-card fade-in" data-group="private" aria-labelledby="fac-private">
+          <div class="facility-media">
+            <img src="assets/images/facility-private-zone.png"
+              onerror="this.onerror=null;this.src='assets/images/facility-private-zone.jpg';"
+              alt="Private dining room — elegant wood paneled cabin at Ashram Restro" class="facility-img"
+              loading="lazy" />
+            <span class="facility-overlay-badge">🔒 Zone 02</span>
+            <span class="facility-vibe-tag">Enclosed &amp; Secluded</span>
+          </div>
+          <div class="facility-body">
+            <div class="facility-marker">⌖ Families &amp; VIP Groups</div>
+            <h3 id="fac-private"><span class="lang-en">Private Zone</span><span class="lang-hi"
+                style="font-family:'Noto Sans Devanagari',sans-serif">प्राइवेट ज़ोन</span></h3>
+            <p>
+              <span class="lang-en">A secluded, wood-paneled dining sanctuary for small groups seeking privacy. Perfect
+                for family get-togethers, confidential discussions, or celebration feasts without outside
+                interruptions.</span>
+              <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">लकड़ी के पैनल वाला एकांत
+                डाइनिंग केबिन। पारिवारिक मिलन, व्यक्तिगत चर्चाओं या बिना किसी व्यवधान के उत्सव मनाने के लिए
+                आदर्श।</span>
+            </p>
+            <div class="facility-features">
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Capacity:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">क्षमता:</strong> <span
+                    class="lang-en">Comfortably seats 6 to 12 guests</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">6 से 12 मेहमानों के लिए आरामदायक
+                    बैठक</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Setup:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">व्यवस्था:</strong> <span class="lang-en">Solid
+                    dark wood table, brass accents &amp; dedicated server</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">डार्क वुड टेबल और व्यक्तिगत सेवा</span></span>
+              </div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Best For:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">उपयुक्त:</strong> <span class="lang-en">Family
+                    dinners, confidential catchups, festive treats</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">पारिवारिक डिनर, निजी बातचीत,
+                    त्योहार</span></span></div>
+            </div>
+            <div class="facility-footer-action">
+              <a href="booking.html?seating=Private+Zone" class="facility-btn-reserve">
+                <span class="lang-en">Reserve Private Zone →</span>
+                <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">प्राइवेट ज़ोन बुक करें
+                  →</span>
+              </a>
+              <a href="https://wa.me/918002193829?text=Hi%20Ashram%20Restro%2C%20I%20would%20like%20to%20enquire%20about%20booking%20the%20Private%20Dining%20Zone."
+                target="_blank" rel="noopener" class="facility-btn-whatsapp" aria-label="Enquire on WhatsApp">💬</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Silent Zone (incorporating Working & Meeting) -->
+        <article class="facility-card fade-in" data-group="work" aria-labelledby="fac-silent">
+          <div class="facility-media">
+            <img src="assets/images/facility-silent-zone.png"
+              alt="Silent Zone — acoustic wood slats, laptop work desks and quiet meeting space at Ashram Restro"
+              class="facility-img" loading="lazy" />
+            <span class="facility-overlay-badge">◒ Zone 03</span>
+            <span class="facility-vibe-tag">Tranquil · Work &amp; Meetings</span>
+          </div>
+          <div class="facility-body">
+            <div class="facility-marker">◒ Silent · Work Desks · Quiet Meetings</div>
+            <h3 id="fac-silent"><span class="lang-en">Silent Zone <small
+                  style="font-size:.78rem;font-weight:600;color:var(--text-mid);">(Work, Study &amp;
+                  Meetings)</small></span><span class="lang-hi"
+                style="font-family:'Noto Sans Devanagari',sans-serif">साइलेंट ज़ोन <small
+                  style="font-size:.78rem;font-weight:600;">(काम, पढ़ाई और मीटिंग्स)</small></span></h3>
+            <p>
+              <span class="lang-en">An acoustically softened, tranquil sanctuary thoughtfully configured for focused
+                study, remote laptop work, quiet team meetings, and mindful dining. Specially convenient for IIT Patna
+                scholars, researchers, and professionals who need power sockets, Wi-Fi, and a distraction-free setting
+                over good food and coffee.</span>
+              <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आईआईटी पटना के छात्रों,
+                शोधकर्ताओं और प्रोफेशनल्स के लिए एक शांत और एकाग्र वातावरण। यह ज़ोन लैपटॉप वर्क डेस्क, चार्जिंग सॉकेट्स,
+                हाई-स्पीड वाई-फ़ाई और शांत मीटिंग व्यवस्था से सुसज्जित है — ताकि आप बेहतरीन कॉफ़ी और खाने के साथ पढ़ाई,
+                काम या पेशेवर चर्चाएं बिना किसी व्यवधान के कर सकें।</span>
+            </p>
+            <div class="facility-features">
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Laptop &amp; Study Ready:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">पढ़ाई और लैपटॉप:</strong> <span
+                    class="lang-en">Dedicated power charging outlets, ergonomic desks &amp; fast Wi-Fi</span><span
+                    class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">हर टेबल पर चार्जिंग सॉकेट,
+                    आरामदायक कुर्सियां और तेज़ वाई-फ़ाई</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Quiet Meetings &amp; Discussions:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">शांत मीटिंग्स:</strong> <span
+                    class="lang-en">Meeting table arrangement for team catch-ups &amp; IIT faculty lunches</span><span
+                    class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">टीम चर्चाओं और फैकल्टी लंच के
+                    लिए शांत बैठक व्यवस्था</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Peaceful Ambience:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">शांत माहौल:</strong> <span
+                    class="lang-en">Acoustic wood slat panelling, lush plants, low decibels &amp; mindful
+                    dining</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">साउंड-डैम्पनिंग पैनल, हरे पौधे और धीमा
+                    सुकूनदेह माहौल</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Near IIT Patna:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">कैंपस के करीब:</strong> <span
+                    class="lang-en">Just 2 mins from Gate No. 01 with artisanal coffee &amp; quick bite
+                    platters</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">गेट नं.
+                    01 से मात्र 2 मिनट, कॉफ़ी और स्नैक्स के साथ</span></span></div>
+            </div>
+            <div class="facility-footer-action">
+              <a href="booking.html?seating=Silent+Zone" class="facility-btn-reserve">
+                <span class="lang-en">Reserve Silent / Work Spot →</span>
+                <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">साइलेंट / वर्किंग स्पॉट बुक
+                  करें →</span>
+              </a>
+              <a href="https://wa.me/918002193829?text=Hi%20Ashram%20Restro%2C%20I%20would%20like%20to%20enquire%20about%20the%20Silent%20%2F%20Work%20%2F%20Meeting%20Zone."
+                target="_blank" rel="noopener" class="facility-btn-whatsapp" aria-label="Enquire on WhatsApp">💬</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Dining Area -->
+        <article class="facility-card fade-in" data-group="dining" aria-labelledby="fac-dining">
+          <div class="facility-media">
+            <img src="assets/images/about-interior.png"
+              onerror="this.onerror=null;this.src='assets/images/facility-dining-area.jpg';"
+              alt="Main dining area — warm spacious family restaurant seating" class="facility-img" loading="lazy" />
+            <span class="facility-overlay-badge">🍽️ Zone 04</span>
+            <span class="facility-vibe-tag">Spacious &amp; Welcoming</span>
+          </div>
+          <div class="facility-body">
+            <div class="facility-marker">🍽️ The Main Hall</div>
+            <h3 id="fac-dining"><span class="lang-en">Dining Area</span><span class="lang-hi"
+                style="font-family:'Noto Sans Devanagari',sans-serif">डाइनिंग एरिया</span></h3>
+            <p>
+              <span class="lang-en">The vibrant heart of Ashram Restro — welcoming families, student groups, and
+                foodies. Warm lighting, cushioned booth benches, and flexible dining tables create a joyous Indian
+                culinary ambiance.</span>
+              <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां का मुख्य हॉल —
+                परिवारों और बड़े समूहों के लिए। गर्म रोशनी, आरामदायक सोफे और खुला दोस्ताना माहौल।</span>
+            </p>
+            <div class="facility-features">
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Layout:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">व्यवस्था:</strong> <span
+                    class="lang-en">Accommodates 2, 4, 8 to 25+ guests seamlessly</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">2 से 25+ मेहमानों के लिए लचीली टेबल
+                    व्यवस्था</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Service:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">सेवा:</strong> <span class="lang-en">Attentive
+                    waitstaff with sizzling tandoori &amp; curries</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">गरमा-गरम तंदूरी और ग्रेवी व्यंजनों की त्वरित
+                    सेवा</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Best For:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">उपयुक्त:</strong> <span class="lang-en">Sunday
+                    family dinners, birthday treats, student reunions</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">पारिवारिक डिनर, जन्मदिन और दोस्तों का
+                    जमावड़ा</span></span></div>
+            </div>
+            <div class="facility-footer-action">
+              <a href="booking.html?seating=Dining+Area" class="facility-btn-reserve">
+                <span class="lang-en">Reserve Dining Table →</span>
+                <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">डाइनिंग टेबल बुक करें
+                  →</span>
+              </a>
+              <a href="https://wa.me/918002193829?text=Hi%20Ashram%20Restro%2C%20I%20would%20like%20to%20book%20a%20table%20in%20the%20Main%20Dining%20Area."
+                target="_blank" rel="noopener" class="facility-btn-whatsapp" aria-label="Enquire on WhatsApp">💬</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Parking -->
+        <article class="facility-card fade-in" data-group="dining" aria-labelledby="fac-parking">
+          <div class="facility-media">
+            <img src="assets/images/facility-parking.jpg"
+              alt="Dedicated parking area — secure vehicle parking at Ashram Restro" class="facility-img"
+              loading="lazy" />
+            <span class="facility-overlay-badge">🚗 Zone 05</span>
+            <span class="facility-vibe-tag">Secure &amp; Hassle-Free</span>
+          </div>
+          <div class="facility-body">
+            <div class="facility-marker">🚗 Vehicles &amp; Safety</div>
+            <h3 id="fac-parking"><span class="lang-en">Dedicated Secure Parking</span><span class="lang-hi"
+                style="font-family:'Noto Sans Devanagari',sans-serif">समर्पित सुरक्षित पार्किंग</span></h3>
+            <p>
+              <span class="lang-en">Dedicated on-premise parking right along the Bihta-Kanpa Road entrance. Park your
+                cars, bikes, and scooties with total peace of mind while enjoying your dining experience.</span>
+              <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">बिहटा-कनपा रोड पर रेस्तरां
+                परिसर में समर्पित पार्किंग। बिना किसी चिंता के अपनी कार या बाइक पार्क करें और खाने का आनंद लें।</span>
+            </p>
+            <div class="facility-features">
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Capacity:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">क्षमता:</strong> <span
+                    class="lang-en">Spacious parking bays for four-wheelers &amp; two-wheelers</span><span
+                    class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">कारों और बाइकों के लिए अलग
+                    व्यवस्थित जगह</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Security:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">सुरक्षा:</strong> <span
+                    class="lang-en">Well-lit perimeter with parking assistance on arrival</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">अच्छी रोशनी और आगमन पर पार्किंग
+                    सहायता</span></span></div>
+              <div class="facility-feature-item"><span class="facility-feature-icon">✔</span> <span><strong
+                    class="lang-en">Access:</strong><strong class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">रास्ता:</strong> <span class="lang-en">Direct,
+                    smooth driveway access off Bihta-Kanpa Road</span><span class="lang-hi"
+                    style="font-family:'Noto Sans Devanagari',sans-serif">मुख्य सड़क से सीधा और आसान
+                    प्रवेश</span></span></div>
+            </div>
+            <div class="facility-footer-action">
+              <a href="visit.html#map" class="facility-btn-reserve">
+                <span class="lang-en">Get Driving Directions ↗</span>
+                <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">रास्ता देखें ↗</span>
+              </a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Ashram+Restro%2C+GVP4%2B2Q%2C+Dilawarpur%2C+Bihar"
+                target="_blank" rel="noopener" class="facility-btn-whatsapp" aria-label="Open in Google Maps">📍</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA Box -->
+      <div class="text-center fade-in"
+        style="margin-top:3.5rem;background:var(--green-800);border-radius:var(--radius-xl);padding:3.5rem 2rem;color:var(--white);">
+        <h2 style="color:var(--white);margin-bottom:.5rem;">
+          <span class="lang-en">Reserve Your Preferred Zone Today</span>
+          <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आज ही अपना पसंदीदा ज़ोन बुक
+            करें</span>
+        </h2>
+        <p style="color:rgba(255,255,255,.8);max-width:580px;margin:0 auto 2rem;line-height:1.6;">
+          <span class="lang-en">Drop us an enquiry with your guest count and chosen zone. Our hospitality team will
+            arrange the perfect setup for you.</span>
+          <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">मेहमानों की संख्या और पसंदीदा ज़ोन
+            के साथ हमें अनुरोध भेजें। हमारी टीम आपके लिए सर्वोत्तम व्यवस्था करेगी।</span>
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="booking.html" class="btn btn-primary btn-lg">
+            <span class="lang-en">📅 Book a Table Now</span>
+            <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">📅 अभी टेबल बुक करें</span>
+          </a>
+          <a href="https://wa.me/918002193829?text=Hi%20Ashram%20Restro%2C%20I%20would%20like%20to%20inquire%20about%20table%20availability%20for%20today."
+            target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+            <span class="lang-en">💬 Chat on WhatsApp</span>
+            <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">💬 WhatsApp पर पूछें</span>
+          </a>
+          <a href="tel:+918002193829" class="btn btn-outline-white btn-lg">
+            <span class="lang-en">📞 Call: +91 80021 93829</span>
+            <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">📞 कॉल करें: +91 80021
+              93829</span>
+          </a>
+        </div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:1.5rem;margin-bottom:0;">
+          <span class="lang-en">Zone allocation is subject to seating availability. Please verify with staff when
+            booking.</span>
+          <span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">ज़ोन उपलब्धता व्यस्तता पर निर्भर
+            करती है। कृपया बुकिंग के समय पुष्टि करें।</span>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Ashram Restro</div>
+          <div class="footer-brand-hi" style="font-family:'Noto Sans Devanagari',sans-serif">आश्रम रेस्तरां</div>
+          <p class="footer-tagline"><span class="lang-en">5 unique spaces &amp; seating zones · Near IIT Patna,
+              Bihta.</span><span class="lang-hi" style="font-family:'Noto Sans Devanagari',sans-serif">5 अनूठे ज़ोन ·
+              आईआईटी पटना के पास।</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="facilities.html">Facilities</a>
+          <a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="booking.html">Booking</a><a
+            href="visit.html">Visit</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><a href="tel:+918002193829">+91 80021 93829</a></p>
+          <p><a href="tel:+919113723907">+91 91137 23907</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="footer-year"></span> Ashram Restro</span></div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your Order</h2><button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="order-type-select">
+        <button class="order-type-btn active" data-type="dine-in">🍽️<span
+            style="font-size:.68rem;">Dine-in</span></button>
+        <button class="order-type-btn" data-type="takeaway">🥡<span style="font-size:.68rem;">Takeaway</span></button>
+        <button class="order-type-btn" data-type="delivery">🏠<span style="font-size:.68rem;">Delivery</span></button>
+      </div>
+      <div class="checkout-fields">
+        <div class="form-group"><input type="text" id="cust-name" placeholder="Your name *" required /><span
+            class="error-msg">Required</span></div>
+        <div class="form-group"><input type="tel" id="cust-phone" placeholder="Phone number *" required /><span
+            class="error-msg">Valid phone required</span></div>
+        <div class="form-group" id="delivery-addr-wrap" style="display:none"><textarea id="cust-addr"
+            placeholder="Delivery address *" rows="2"></textarea><span class="error-msg">Required</span></div>
+        <textarea id="cust-notes" placeholder="Notes (optional)" rows="2"
+          style="width:100%;padding:.55rem .75rem;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:.85rem;resize:vertical;font-family:inherit;"></textarea>
+      </div>
+      <div class="cart-total-row"><span class="cart-total-label">Est. Total</span><span class="cart-total-val"
+          id="cart-total-val">₹0</span></div>
+      <button class="btn btn-whatsapp btn-block" id="cart-checkout-btn" disabled>💬 Send Order via WhatsApp</button>
+      <p class="cart-note">Staff will confirm your order.</p>
+    </div>
+  </aside>
+
+  <script src="site-config.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Zone filtering
+    const filterBtns = document.querySelectorAll('[data-zone-filter]');
+    const cards = document.querySelectorAll('.facility-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const val = btn.dataset.zoneFilter;
+        cards.forEach(card => {
+          if (val === 'all' || card.dataset.group === val) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
